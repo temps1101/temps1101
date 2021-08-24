@@ -2,6 +2,13 @@
 
 diurnal…no. nocturnal…no. manernal…yes.
 
+## I am…
+
+- A secondary school student who lives in Japan, near Mt. Fuji.
+- REALLY interested in artificial intelligence
+- I'm a member of my secondary school's brass band. My girlfriend is my clarinet.
+- using VSCode for IDE.
+
 ## What I can do
 
 <details>
