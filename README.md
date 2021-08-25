@@ -48,7 +48,7 @@ diurnal…no. nocturnal…no. manernal…yes.
 - Team development
 - Minecraft plugins
 
-## My filthy appearance (eddited by random cv2 effects)
+## My ~~beautiful~~ face (eddited by random cv2 effects)
 <details>
 <summary>Note: I don't recommend watching this.</summary>
 
