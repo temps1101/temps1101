@@ -37,91 +37,91 @@
     <tbody>
         <tr>
             <td>1</td>
-            <a href="google.com"><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
         </tr>
         <tr>
             <td>2</td>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
         </tr>
         <tr>
             <td>3</td>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
         </tr>
         <tr>
             <td>4</td>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
         </tr>
         <tr>
             <td>5</td>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
         </tr>
         <tr>
             <td>6</td>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
         </tr>
         <tr>
             <td>7</td>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
         </tr>
         <tr>
             <td>8</td>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
-            <a><td></td></a>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
         </tr>
     </tbody>
 </table>
