@@ -73,8 +73,8 @@
             <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
             <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
             <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
-            <td><a href="temps1101.github.io"><img src="images/white.png"></a></td>
-            <td><a href="temps1101.github.io"><img src="images/black.png"></a></td>
+            <td><a><img src="images/white.png"></a></td>
+            <td><a><img src="images/black.png"></a></td>
             <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
             <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
             <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
@@ -84,9 +84,9 @@
             <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
             <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
             <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
-            <td><a href="temps1101.github.io"><img src="images/black.png"></a></td>
-            <td><a href="temps1101.github.io"><img src="images/white.png"></a></td>
-            <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
+            <td><a><img src="images/black.png"></a></td>
+            <td><a><img src="images/white.png"></a></td>
+            <td><a><img src="images/blank.png"></a></td>
             <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
             <td><a href="temps1101.github.io"><img src="images/blank.png"></a></td>
         </tr>
