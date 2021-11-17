@@ -20,6 +20,7 @@
 
 ## Play othello in my github profile!
 
+<!--board-->
 <table>
     <thead>
         <tr>
@@ -125,3 +126,4 @@
         </tr>
     </tbody>
 </table>
+<!--board-->
