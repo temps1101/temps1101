@@ -65,8 +65,10 @@ def get_next_stone(board: list, position: list, direction: int) -> int:
         if direction == DIRECTION_E:
             return board[y][x + 1]['status']
         if direction == DIRECTION_SE:
+            print(x+1, y+1)
             return board[y + 1][x + 1]['status']
         if direction == DIRECTION_S:
+            print(y+1, x)
             return board[y + 1][x]['status']
         if direction == DIRECTION_SW:
             return board[y + 1][x - 1]['status']
@@ -113,9 +115,11 @@ def update_position(position: list, direction: int) -> list:
 def reverse_stone(board: list, placed_status: int, stone_position: list) -> list:
     reversed_status = BLACK if placed_status == WHITE else WHITE
     for direction in range(8):
-        temp_position = update_position(stone_position, direction)
         reverse_claim = False
-        next_stone: int = get_next_stone(board, temp_position, direction)
+        next_stone: int = get_next_stone(board, stone_position, direction)
+        temp_position = update_position(stone_position, direction)
+        print(direction, next_stone)
+        '''
         while next_stone not in [BLANK, None]:
             if next_stone == reversed_status:
                 reverse_claim = True
@@ -126,9 +130,10 @@ def reverse_stone(board: list, placed_status: int, stone_position: list) -> list
                     temp_position2 = update_position(stone_position, direction)
                     while get_next_stone(board, temp_position2, direction) == reversed_status:
                         x, y = temp_position2
-                        board[x][y]['status'] = placed_status
+                        board[y][x]['status'] = placed_status
                 else:
                     break
+        '''
 
     return board
 
@@ -138,7 +143,9 @@ if __name__ == '__main__':
 
     board_list = get_board(markdown)
 
+    board_list[4][5]['status'] = BLACK
     board_list = reverse_stone(board_list, BLACK, [5, 4])
+
 
     with open("test.md", "w", encoding='utf-8') as f:
         f.write(write_board(board_list, markdown))
