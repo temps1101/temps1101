@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as et
+from copy import deepcopy
 
 
 BLANK = 0
@@ -75,7 +76,7 @@ def get_next_stone(board: list, position: list, direction: int) -> int:
         if direction == DIRECTION_NW:
             return board[y - 1][x - 1]['status']
     except IndexError:
-            return None
+        return None
 
 
 def update_position(position: list, direction: int) -> list:
@@ -121,29 +122,28 @@ def update_position(position: list, direction: int) -> list:
 
 
 def reverse_stone(board: list, placed_status: int, stone_position: list) -> list:
-    board_dst = board.copy()
     reversed_status = BLACK if placed_status == WHITE else WHITE
     for direction in range(8):
-        next_stone: int = get_next_stone(board_dst, stone_position, direction)
+        next_stone: int = get_next_stone(board, stone_position, direction)
         next_stone_position = update_position(stone_position, direction)
 
         while next_stone == reversed_status:
-            next_stone = get_next_stone(board_dst, next_stone_position, direction)
+            next_stone = get_next_stone(board, next_stone_position, direction)
 
             if next_stone == placed_status:
                 next_stone_position2 = update_position(stone_position, direction)
 
                 while next_stone_position2 != next_stone_position:
                     x, y = next_stone_position2
-                    board_dst[y][x]['status'] = placed_status
+                    board[y][x]['status'] = placed_status
                     next_stone_position2 = update_position(next_stone_position2, direction)
 
                 x, y = next_stone_position2
-                board_dst[y][x]['status'] = placed_status
+                board[y][x]['status'] = placed_status
 
             next_stone_position = update_position(next_stone_position, direction)
 
-    return board_dst
+    return board
 
 
 def place_from_code(code: str, board_list: list) -> list:
@@ -176,7 +176,7 @@ def place_from_code(code: str, board_list: list) -> list:
 
     position = [0, 0]
     if code[1].lower() in char_list:
-       position[0] = char_list.index(code[1])
+        position[0] = char_list.index(code[1])
 
     else:
         return error
@@ -187,32 +187,23 @@ def place_from_code(code: str, board_list: list) -> list:
     else:
         return error
 
-    flipped_board = reverse_stone(board_list, status_color, position)
+    flipped_board = reverse_stone(deepcopy(board_list), status_color, position)
 
     if flipped_board != board_list:
-        flipped_board[position[1]][position[0]] = status_color
+        flipped_board[position[1]][position[0]]['status'] = status_color
         return {'exit code': 0, 'board_list': flipped_board}
 
     else:
         return error
 
-        
+
 if __name__ == '__main__':
     with open('README.md', 'r', encoding='utf-8') as f:
         markdown = f.read()
 
     board_list = get_board(markdown)
 
-    print(place_from_code('bd3', board_list))
-    #board_list[2][2]['status'] = WHITE
-    #board_list[1][1]['status'] = BLACK
-    #board_list[5][5]['status'] = BLACK
-    #board_list = reverse_stone(board_list, BLACK, [1, 1])
-    #board_list[2][5]['status'] = WHITE
-    #board_list[2][5]['status'] = WHITE
-    #board_list[5][2]['status'] = WHITE
-    #board_list = reverse_stone(board_list, WHITE, [2, 5])
-
+    board_list_res = place_from_code('be6', board_list.copy())['board_list']
 
     with open("test.md", "w", encoding='utf-8') as f:
-        f.write(write_board(board_list, markdown))
+        f.write(write_board(board_list_res, markdown))
