@@ -60,14 +60,18 @@ def get_reversed_color(color: int) -> int:
     return BLACK if color == WHITE else WHITE if color == BLACK else None
 
 
-def place_stone(board: list, stone_color: int, stone_position: list) -> list:
+def place_stone(board: list, stone_color: int, stone_position: list) -> None:
     x, y = stone_position
     board[y][x]['status'] = stone_color
 
 
 def get_stone_color(board: list, stone_position: list) -> list:
     x, y = stone_position
-    return board[y][x]['status']
+    try:
+        return board[y][x]['status']
+
+    except IndexError:
+        return None
 
 
 def update_position(position: list, direction: int) -> list:
@@ -153,6 +157,32 @@ def place_from_code(board: list, code: str) -> list:
     return flipped_board
 
 
+def set_url(board: list, stone_position: list, url: str) -> None:
+    x, y = stone_position
+    board[y][x]['url'] = url
+
+
+def create_url(board: list, stone_color: int) -> list:
+    board = deepcopy(board)
+
+    for y in range(8):
+        for x in range(8):
+            position = [x, y]
+            if get_stone_color(board, position) != BLANK or len(get_reverse_direction(board, stone_color, position)) == 0:
+                url = ''
+
+            else:
+                code = ('b' if stone_color == BLACK else 'w') + \
+                    ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'][position[0]] + \
+                    ['1', '2', '3', '4', '5', '6', '7', '8'][position[1]]
+
+                url = f'https://github.com/temps1101/temps1101/issues/new?&title={code}&body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR&labels=place+stone'
+
+            set_url(board, position, url)
+
+    return board
+
+
 if __name__ == '__main__':
     with open('README.md', 'r', encoding='utf-8') as f:
         markdown = f.read()
@@ -165,7 +195,7 @@ if __name__ == '__main__':
     place_stone(board, WHITE, [6, 2])
     place_stone(board, BLACK, [6, 3])
     place_stone(board, BLACK, [2, 4])
-    board = place_from_code('bg1', board)
+    board = create_url(board, BLACK)
 
     with open("test.md", "w", encoding='utf-8') as f:
         f.write(write_board(board, markdown))
