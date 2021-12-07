@@ -56,154 +56,116 @@ def write_board(board: list, markdown: str) -> str:
     return '\n<!--board-->\n'.join(separated_markdown)
 
 
-def get_next_stone(board: list, position: list, direction: int) -> int:
-    x, y = position
-    try:
-        if direction == DIRECTION_N:
-            return board[y - 1][x]['status']
-        if direction == DIRECTION_NE:
-            return board[y - 1][x + 1]['status']
-        if direction == DIRECTION_E:
-            return board[y][x + 1]['status']
-        if direction == DIRECTION_SE:
-            return board[y + 1][x + 1]['status']
-        if direction == DIRECTION_S:
-            return board[y + 1][x]['status']
-        if direction == DIRECTION_SW:
-            return board[y + 1][x - 1]['status']
-        if direction == DIRECTION_W:
-            return board[y][x - 1]['status']
-        if direction == DIRECTION_NW:
-            return board[y - 1][x - 1]['status']
-    except IndexError:
-        return None
+def get_reversed_color(color: int) -> int:
+    return BLACK if color == WHITE else WHITE if color == BLACK else None
+
+
+def place_stone(board: list, stone_color: int, stone_position: list) -> list:
+    x, y = stone_position
+    board[y][x]['status'] = stone_color
+
+
+def get_stone_color(board: list, stone_position: list) -> list:
+    x, y = stone_position
+    return board[y][x]['status']
 
 
 def update_position(position: list, direction: int) -> list:
-    x, y = position
-    updated_position = list()
+    position_ = deepcopy(position)
 
     if direction == DIRECTION_N:
-        updated_position.append(x)
-        updated_position.append(y - 1)
+        position_[1] -= 1
 
     if direction == DIRECTION_NE:
-        updated_position.append(x + 1)
-        updated_position.append(y - 1)
+        position_[0] += 1
+        position_[1] -= 1
 
     if direction == DIRECTION_E:
-        updated_position.append(x + 1)
-        updated_position.append(y)
-        updated_position[0] += 1
+        position_[0] += 1
 
     if direction == DIRECTION_SE:
-        updated_position.append(x + 1)
-        updated_position.append(y + 1)
+        position_[0] += 1
+        position_[1] += 1
 
     if direction == DIRECTION_S:
-        updated_position.append(x)
-        updated_position.append(y + 1)
+        position_[1] += 1
 
     if direction == DIRECTION_SW:
-        updated_position.append(x - 1)
-        updated_position.append(y + 1)
-        updated_position[0] -= 1
-        updated_position[1] += 1
+        position_[0] -= 1
+        position_[1] += 1
 
     if direction == DIRECTION_W:
-        updated_position.append(x - 1)
-        updated_position.append(y)
+        position_[0] -= 1
 
     if direction == DIRECTION_NW:
-        updated_position.append(x - 1)
-        updated_position.append(y - 1)
+        position_[0] -= 1
+        position_[1] -= 1
 
-    return updated_position
+    return position_
 
 
-def reverse_stone(board: list, placed_status: int, stone_position: list) -> list:
-    reversed_status = BLACK if placed_status == WHITE else WHITE
+def get_reverse_direction(board: list, stone_color: int, stone_position: list) -> list:
+    reversed_stone_color = get_reversed_color(stone_color)
+    reverse_directions = list()
+
     for direction in range(8):
-        next_stone: int = get_next_stone(board, stone_position, direction)
         next_stone_position = update_position(stone_position, direction)
+        next_stone_color = get_stone_color(board, next_stone_position)
 
-        while next_stone == reversed_status:
-            next_stone = get_next_stone(board, next_stone_position, direction)
-
-            if next_stone == placed_status:
-                next_stone_position2 = update_position(stone_position, direction)
-
-                while next_stone_position2 != next_stone_position:
-                    x, y = next_stone_position2
-                    board[y][x]['status'] = placed_status
-                    next_stone_position2 = update_position(next_stone_position2, direction)
-
-                x, y = next_stone_position2
-                board[y][x]['status'] = placed_status
-
+        while next_stone_color == reversed_stone_color:
             next_stone_position = update_position(next_stone_position, direction)
+            next_stone_color = get_stone_color(board, next_stone_position)
+
+            if next_stone_color == stone_color:
+                reverse_directions.append(direction)
+                break
+
+    return reverse_directions
+
+
+def reverse_stone(board: list, stone_color: int, stone_position: list) -> list:
+    board = deepcopy(board)
+    reverse_directions = get_reverse_direction(board, stone_color, stone_position)
+
+    for direction in reverse_directions:
+        next_stone_position = update_position(stone_position, direction)
+        next_stone_color = get_stone_color(board, next_stone_position)
+
+        while next_stone_color != stone_color:
+            place_stone(board, stone_color, next_stone_position)
+            next_stone_position = update_position(next_stone_position, direction)
+            next_stone_color = get_stone_color(board, next_stone_position)
 
     return board
 
 
-def place_from_code(code: str, board_list: list) -> list:
-    '''
-    code format: '[COLOR (W|B)][X (A-H)][Y (1-8)]'
-    examples:
-        - to place black stone in position b2, the code will be 'BB2'
-    returns:
-        {
-            'exit code': 0 | 1,
-            'board_list': board_list
-        }
-    '''
+def place_from_code(board: list, code: str) -> list:
+    color_code = code[0].lower()
+    stone_color = WHITE if color_code == 'w' else BLACK
 
-    char_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
-    number_list = [str(item) for item in list(range(1, 9))]
-    error = {'exit code': 1, 'board_list': list()}
+    position = list()
+    position.append(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'].index(code[1]))
+    position.append([str(item) for item in list(range(1, 9))].index(code[2]))
 
-    if len(code) != 3:
-        return error
+    flipped_board = reverse_stone(board, stone_color, position)
 
-    if code[0].lower() == 'w':
-        status_color = WHITE
-
-    elif code[0].lower() == 'b':
-        status_color = BLACK
-
-    else:
-        return error
-
-    position = [0, 0]
-    if code[1].lower() in char_list:
-        position[0] = char_list.index(code[1])
-
-    else:
-        return error
-
-    if code[2] in number_list:
-        position[1] = number_list.index(code[2])
-
-    else:
-        return error
-
-    flipped_board = reverse_stone(deepcopy(board_list), status_color, position)
-
-    if flipped_board != board_list:
-        flipped_board[position[1]][position[0]]['status'] = status_color
-        return {'exit code': 0, 'board_list': flipped_board}
-
-    else:
-        return error
+    place_stone(flipped_board, stone_color, position)
+    return flipped_board
 
 
 if __name__ == '__main__':
     with open('README.md', 'r', encoding='utf-8') as f:
         markdown = f.read()
 
-    board_list = get_board(markdown)
+    board = get_board(markdown)
 
-    board_list_res = place_from_code('be6', board_list.copy())['board_list']
+    place_stone(board, WHITE, [4, 2])
+    place_stone(board, WHITE, [5, 1])
+    place_stone(board, WHITE, [6, 1])
+    place_stone(board, WHITE, [6, 2])
+    place_stone(board, BLACK, [6, 3])
+    place_stone(board, BLACK, [2, 4])
+    board = place_from_code('bg1', board)
 
     with open("test.md", "w", encoding='utf-8') as f:
-        f.write(write_board(board_list_res, markdown))
+        f.write(write_board(board, markdown))
