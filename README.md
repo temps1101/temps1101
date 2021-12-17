@@ -20,6 +20,12 @@
 
 ## Play othello in my github profile!
 
+### Attention:
+
+- If you don't know the rule, see [here](https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english).
+- You need to have a github account to play this.
+- Currently, it's ***<!--color-->BLACK<!--color-->***'s turn!
+
 <!--board-->
 <table>
     <thead>
@@ -127,3 +133,33 @@
     </tbody>
 </table>
 <!--board-->
+
+### Statistics
+
+<!--stats-->
+<table>
+    <thead>
+        <tr>
+            <th>data</th>
+            <th>value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>latest player</td>
+            <td><a href="https://github.com/temps1101">temps1101</a></td>
+        </tr>
+        <tr>
+            <td>placed stones</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>played matches</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+</table>
+<!--stats-->
+
+I'd be very happy if you shared this page on <a href="http://twitter.com/share?url=github.com/temps1101&text=Play+othello+in+temps1101's+github+profile!&via=temps1101&related=temps1101&hashtags=github,othello">twitter</a>!!!!!!
+
