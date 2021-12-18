@@ -6,11 +6,9 @@ on:
 
 jobs:
   place_stone:
-    if: ${{ github.event.label.name == 'bug' }}
+    if: ${{ github.event.label.name == 'place stone' }}
     runs-on: ubuntu-latest
-    steps:
-      - name: flip the board
-        if: ${{ github.event.issue.label.name == 'place stone' }}
 
-      - name: Run a single-line script
-        run: echo test!
+    steps:
+    - uses: actions/checkout@v2
+    - name: ls
