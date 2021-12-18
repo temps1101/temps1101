@@ -7,12 +7,29 @@ jobs:
   add-comment:
     if: github.event.label.name == 'place stone'
     runs-on: ubuntu-latest
+  
     permissions:
       issues: write
     steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
+      - name: run python file
+        run: python main.py echo "RESULT=$(python othello.py ${{ github.event.issue.title }} ${{ github.event.issue.user.login }} )" >> $GITHUB_ENV
+      - name: push if correct
+        if: ${{ env.RESULT == 'successfully placed your stone!' }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "placed stone"
+          git push
       - name: Add comment
         uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            you added labels place stone!
+            ${{ env.RESULT }}
