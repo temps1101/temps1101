@@ -1,0 +1,16 @@
+name: place_stone
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  place_stone:
+    if: ${{ github.event.label.name == 'bug' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: flip the board
+        if: ${{ github.event.issue.label.name == 'place stone' }}
+
+      - name: Run a single-line script
+        run: echo test!
