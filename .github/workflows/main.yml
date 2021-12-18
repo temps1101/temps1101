@@ -1,13 +1,18 @@
-name: place_stone
-
+name: Place stone.
 on:
   issues:
-    types: [opened]
-
+    types:
+      - labeled
 jobs:
-  place_stone:
+  add-comment:
+    if: github.event.label.name == 'place stone'
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
-    - uses: actions/checkout@v2
-    - name: echo label name
-      run: echo ${{ github.event.label.name }}
+      - name: Add comment
+        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            you added labels place stone!
