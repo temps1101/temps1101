@@ -1,0 +1,15 @@
+name: place_stone
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  place_stone:
+    if: ${{ github.event.label.name == 'place stone' }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: list up
+      run: echo "using place stone!"
