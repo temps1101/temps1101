@@ -22,8 +22,8 @@ jobs:
       - name: push if correct
         if: ${{ env.RESULT == 'successfully placed your stone!' }}
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add README.md
           git commit -m "placed stone"
           git push
