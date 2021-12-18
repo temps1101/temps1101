@@ -18,7 +18,7 @@ jobs:
           python-version: '3.8'
           architecture: 'x64'
       - name: run python file
-        run: python main.py echo "RESULT=$(python othello.py ${{ github.event.issue.title }} ${{ github.event.issue.user.login }} )" >> $GITHUB_ENV
+        run: echo "RESULT=$(python othello.py ${{ github.event.issue.title }} ${{ github.event.issue.user.login }} )" >> $GITHUB_ENV
       - name: push if correct
         if: ${{ env.RESULT == 'successfully placed your stone!' }}
         run: |
