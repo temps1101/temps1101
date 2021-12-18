@@ -22,12 +22,16 @@ jobs:
       - name: push if correct
         if: ${{ env.RESULT == 'successfully placed your stone!' }}
         run: |
-          git config --local user.name "temps1101"
-          git config --local user.email "62169032+temps1101@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://github.com/temps1101/temps1101.git
           git add README.md
           git commit -m "placed stone"
-          git push
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
       - name: Add comment
         uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
         with:
