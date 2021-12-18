@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: list up
-      run: ls
+      run: echo "using place stone!"
