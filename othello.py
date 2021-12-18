@@ -248,7 +248,7 @@ if __name__ == '__main__':
                 place_stone(reversed_board, current_color, position)
                 reversed_board = create_url(reversed_board, get_reversed_color(current_color))
 
-                statistics['latest player'] = [argv[2], argv[3]]
+                statistics['latest player'] = [f'https://github.com/{argv[2]}', argv[2]]
                 statistics['placed stones'] += 1
                 if is_reset(reversed_board):
                     reversed_board = INITIALIZED_BOARD
