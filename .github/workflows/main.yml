@@ -24,6 +24,7 @@ jobs:
         run: |
           git config --local user.name "temps1101"
           git config --local user.email "62169032+temps1101@users.noreply.github.com"
+          git remote set-url origin https://github.com/temps1101/temps1101.git
           git add README.md
           git commit -m "placed stone"
           git push
