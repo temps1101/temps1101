@@ -24,6 +24,7 @@
 
 - If you don't know the rule, see [here](https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english).
 - You need to have a github account to play this.
+- Click on the board to place the stone!
 - Currently, it's ***<!--color-->BLACK<!--color-->***'s turn!
 
 
