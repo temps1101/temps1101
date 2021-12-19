@@ -13,14 +13,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - with:
+        with:
           fetch-depth: 0
           token: ${{ secrets.GH_ACCESS_TOKEN }}
           repository: "temps1101/temps1101"
           path: temps1101
 
-      - name: Setup Python
-        uses: actions/setup-python@v2
+      - uses: actions/setup-python@v2
         with:
           python-version: '3.8'
           architecture: 'x64'
