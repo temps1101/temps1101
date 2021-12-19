@@ -5,7 +5,7 @@ on:
       - labeled
 jobs:
   place-stone:
-    if: ${{ startsWith( github.event.issue.title, 'b' ) || startsWith( github.event.issue.title, 'w' ) }}
+    if: ${{ startsWith( github.event.issue.title, '.' ) != true }}
 
     runs-on: ubuntu-latest
     permissions:
