@@ -213,11 +213,10 @@ def create_url(board: list, stone_color: int) -> list:
     return board
 
 
-def is_reset(board: list) -> bool:
+def is_reset(board: list, stone_color: int) -> bool:
     for y in range(8):
         for x in range(8):
-            position = [x, y]
-            if get_stone_color(board, position) == BLANK:
+            if len(get_reverse_direction(board, stone_color, [x, y])) != 0:
                 return False
 
     return True
@@ -250,7 +249,7 @@ if __name__ == '__main__':
 
                 statistics['latest player'] = [argv[2], argv[3]]
                 statistics['placed stones'] += 1
-                if is_reset(reversed_board):
+                if is_reset(reversed_board, get_reversed_color(current_color)):
                     reversed_board = INITIALIZED_BOARD
                     current_color = BLACK
                     statistics['played matches'] += 1
