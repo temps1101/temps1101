@@ -13,12 +13,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_ACCESS_TOKEN }}
+          repository: "temps1101/temps1101"
+          path: temps1101
 
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
           architecture: 'x64'
+          
       - name: clone repo
         run: |
           git clone https://.:${{ secrets.GH_ACCESS_TOKEN }}@github.com/temps1101/temps1101 target
@@ -27,14 +33,14 @@ jobs:
       - name: Run python file
         run: echo "RESULT=$(python othello.py ${{ github.event.issue.title }} ${{ github.event.issue.user.login }} )" >> $GITHUB_ENV
 
-      - name: Commit placed stone
+      - name: Commit and push placed stone
         if: ${{ env.RESULT == 'successfully placed your stone!' }}
         run: |
           git config --global user.name "${GITHUB_ACTOR}"
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add README.md
           git commit -m "Placed stone in `date +"%Y-%m-%d %H:%M"`"
-          git push --force --quiet "https://${GITHUB_ACTOR}:${{ secrets.GH_ACCESS_TOKEN }}@github.com/temps1101/temps1101" main:main
+          git push
 
       - name: Add comment
         uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
