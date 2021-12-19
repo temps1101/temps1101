@@ -2,9 +2,10 @@ name: Place stone.
 on:
   issues:
     types:
-      - labeled
+      - opened
 jobs:
   place-stone:
+    if: ${{ startsWith( github.event.issue.title, '.' ) != true }}
     runs-on: ubuntu-latest
     permissions:
       issues: write
