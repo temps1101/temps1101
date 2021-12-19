@@ -206,7 +206,7 @@ def create_url(board: list, stone_color: int) -> list:
                     ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'][position[0]] + \
                     ['1', '2', '3', '4', '5', '6', '7', '8'][position[1]]
 
-                url = f'https://github.com/temps1101/temps1101/issues/new?&title={code}&body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR&labels=place+stone'
+                url = f'https://github.com/temps1101/temps1101/issues/new?&title={code}&body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR'
 
             set_url(board, position, url)
 
