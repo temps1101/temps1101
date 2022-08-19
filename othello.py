@@ -3,7 +3,7 @@ from copy import deepcopy
 from sys import argv
 
 
-INVAILD_IMG_URL = 'https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg'
+INVALID_IMG_URL = 'https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg'
 INITIALIZED_BOARD = [[{'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}], [{'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}], [{'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://github.com/temps1101/temps1101/issues/new?&title=bd3&body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR&labels=place+stone'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}], [{'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://github.com/temps1101/temps1101/issues/new?&title=bc4&body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR&labels=place+stone'}, {'status': 2, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 1, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}], [{'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 1, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 2, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://github.com/temps1101/temps1101/issues/new?&title=bf5&body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR&labels=place+stone'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}], [{'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://github.com/temps1101/temps1101/issues/new?&title=be6&body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR&labels=place+stone'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}], [{'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}], [{'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}, {'status': 0, 'url': 'https://raw.githubusercontent.com/temps1101/temps1101/dev/images/youcantclickhere.jpg'}]]
 
 BLANK = 0
@@ -199,7 +199,7 @@ def create_url(board: list, stone_color: int) -> list:
         for x in range(8):
             position = [x, y]
             if get_stone_color(board, position) != BLANK or len(get_reverse_direction(board, stone_color, position)) == 0:
-                url = INVAILD_IMG_URL
+                url = INVALID_IMG_URL
 
             else:
                 code = ('b' if stone_color == BLACK else 'w') + \
@@ -216,7 +216,6 @@ def create_url(board: list, stone_color: int) -> list:
 def is_reset(board: list) -> bool:
     for y in range(8):
         for x in range(8):
-            print(get_stone_color(board, [x, y]), x, y)
             if get_stone_color(board, [x, y]) == BLANK:
                 return False
 
@@ -233,45 +232,44 @@ if __name__ == '__main__':
 
     code = argv[1]
 
-    if len(code) == 3:
-        if code[0].lower() == ('b' if current_color == BLACK else 'w'):
-            position = list()
-            try:
-                position.append(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'].index(code[1]))
-                position.append([str(item) for item in list(range(1, 9))].index(code[2]))
-            except ValueError:
-                print('The position code is incorrect')
-                exit()
-
-            if len(get_reverse_direction(board, current_color, position)) != 0:
-                reversed_board = reverse_stone(board, current_color, position)
-                place_stone(reversed_board, current_color, position)
-                reversed_board = create_url(reversed_board, get_reversed_color(current_color))
-
-                statistics['latest player'] = [f'https://github.com/{argv[2]}', argv[2]]
-                statistics['placed stones'] += 1
-                if is_reset(reversed_board):
-                    print("eh")
-                    reversed_board = INITIALIZED_BOARD
-                    current_color = BLACK
-                    statistics['played matches'] += 1
-
-                else:
-                    current_color = get_reversed_color(current_color)
-
-                with open("README.md", "w", encoding='utf-8') as f:
-                    markdown = write_board(reversed_board, markdown)
-                    markdown = write_current_stone_color(current_color, markdown)
-                    markdown = write_statistics(statistics, markdown)
-                    f.write(markdown)
-
-                print('successfully placed your stone!')
-
-            else:
-                print('The position you want to place the stone is unplaceable.')
-
-        else:
-            print('The stone color code is incorrect.')
-
-    else:
+    if len(code) != 3:
         print('Your code\'s length is incorrect.')
+        exit()
+
+    if code[0].lower() != ('b' if current_color == BLACK else 'w'):
+        print('The stone color code is incorrect.')
+        exit()
+
+    position = list()
+    try:
+        position.append(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'].index(code[1]))
+        position.append([str(item) for item in list(range(1, 9))].index(code[2]))
+    except ValueError:
+        print('The position code is incorrect')
+        exit()
+
+    if len(get_reverse_direction(board, current_color, position)) == 0:
+        print('The position you want to place the stone is unplaceable.')
+        exit()
+
+    reversed_board = reverse_stone(board, current_color, position)
+    place_stone(reversed_board, current_color, position)
+    reversed_board = create_url(reversed_board, get_reversed_color(current_color))
+
+    statistics['latest player'] = [f'https://github.com/{argv[2]}', argv[2]]
+    statistics['placed stones'] += 1
+
+    if is_reset(reversed_board):
+        reversed_board = INITIALIZED_BOARD
+        current_color = BLACK
+        statistics['played matches'] += 1
+    else:
+        current_color = get_reversed_color(current_color)
+
+    with open("README.md", "w", encoding='utf-8') as f:
+        markdown = write_board(reversed_board, markdown)
+        markdown = write_current_stone_color(current_color, markdown)
+        markdown = write_statistics(statistics, markdown)
+        f.write(markdown)
+
+    print('successfully placed your stone!')
