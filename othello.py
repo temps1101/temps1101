@@ -85,7 +85,7 @@ def write_current_stone_color(stone_color: int, markdown: str) -> str:
     return '<!--color-->'.join(separated_markdown)
 
 
-def write_statistics(statistics: list, markdown: str) -> str:
+def write_statistics(statistics: dict, markdown: str) -> str:
     separated_markdown = markdown.split('<!--stats-->')
     root = et.fromstring(separated_markdown[1])
 
@@ -213,10 +213,11 @@ def create_url(board: list, stone_color: int) -> list:
     return board
 
 
-def is_reset(board: list, stone_color: int) -> bool:
+def is_reset(board: list) -> bool:
     for y in range(8):
         for x in range(8):
-            if len(get_reverse_direction(board, stone_color, [x, y])) != 0:
+            print(get_stone_color(board, [x, y]), x, y)
+            if get_stone_color(board, [x, y]) == BLANK:
                 return False
 
     return True
@@ -249,7 +250,8 @@ if __name__ == '__main__':
 
                 statistics['latest player'] = [f'https://github.com/{argv[2]}', argv[2]]
                 statistics['placed stones'] += 1
-                if is_reset(reversed_board, get_reversed_color(current_color)):
+                if is_reset(reversed_board):
+                    print("eh")
                     reversed_board = INITIALIZED_BOARD
                     current_color = BLACK
                     statistics['played matches'] += 1
