@@ -8,16 +8,7 @@ jobs:
     if: ${{ startsWith( github.event.issue.title, '.' ) != true }}
     runs-on: ubuntu-latest
     permissions:
-      actions: write
-      checks: write
-      contents: write
-      deployments: write
       issues: write
-      packages: write
-      pull-requests: write
-      repository-projects: write
-      security-events: write
-      statuses: write
 
     steps:
       - uses: actions/checkout@v3
@@ -39,7 +30,11 @@ jobs:
           git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add README.md
           git commit -m "Placed stone in `date +"%Y-%m-%d %H:%M"`"
-          git push
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GH_ACCESS_TOKEN }}
+          branch: main
 
       - name: Add comment
         uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
