@@ -25,7 +25,8 @@
 - If you don't know the rule, see [here](https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english).
 - You need to have a github account to play this.
 - Click on the board to place the stone!
-- Currently, it's ***<!--color-->WHITE<!--color-->***'s turn!
+- Currently, it's ***<!--color-->BLACK<!--color-->***'s turn!
+
 
 
 
@@ -65,7 +66,7 @@
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
-            <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
+            <td><a href="https://github.com/temps1101/temps1101/issues/new?&amp;title=bf2&amp;body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
         </tr>
@@ -73,10 +74,10 @@
             <td>3</td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
-            <td><a href="https://github.com/temps1101/temps1101/issues/new?&amp;title=wc3&amp;body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
-            <td><a href="https://github.com/temps1101/temps1101/issues/new?&amp;title=we3&amp;body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
+            <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/white.png" /></a></td>
+            <td><a href="https://github.com/temps1101/temps1101/issues/new?&amp;title=bf3&amp;body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
         </tr>
@@ -86,19 +87,19 @@
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/black.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/black.png" /></a></td>
-            <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/black.png" /></a></td>
-            <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
+            <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/white.png" /></a></td>
+            <td><a href="https://github.com/temps1101/temps1101/issues/new?&amp;title=bf4&amp;body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
         </tr>
         <tr>
             <td>5</td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
-            <td><a href="https://github.com/temps1101/temps1101/issues/new?&amp;title=wb5&amp;body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR"><img src="images/blank.png" /></a></td>
+            <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/black.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/black.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/white.png" /></a></td>
-            <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
+            <td><a href="https://github.com/temps1101/temps1101/issues/new?&amp;title=bf5&amp;body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
         </tr>
@@ -109,7 +110,7 @@
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/black.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
-            <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
+            <td><a href="https://github.com/temps1101/temps1101/issues/new?&amp;title=bf6&amp;body=Just+press+[Submit+new+issue]+button+below.%0A+DO+NOT+EDIT+THE+TITLE.+IT+WILL+CAUSE+AN+ERROR"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
             <td><a href="https://raw.githubusercontent.com/temps1101/temps1101/main/images/youcantclickhere.jpg"><img src="images/blank.png" /></a></td>
         </tr>
@@ -143,7 +144,9 @@
 
 
 
+
 ### Statistics
+
 
 
 
@@ -160,11 +163,11 @@
     <tbody>
         <tr>
             <td>latest player</td>
-            <td><a href="https://github.com/temps1101">temps1101</a></td>
+            <td><a href="https://github.com/moons-14">moons-14</a></td>
         </tr>
         <tr>
             <td>placed stones</td>
-            <td>64</td>
+            <td>65</td>
         </tr>
         <tr>
             <td>played matches</td>
@@ -173,6 +176,7 @@
     </tbody>
 </table>
 <!--stats-->
+
 
 
 
